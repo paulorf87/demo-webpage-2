@@ -1,10 +1,11 @@
 :root {
-    --dark:#1B2330;
-    --darker:#181F2B;
-    --accent:#62E0D9;
+    /* --dark:#1B2330; */
+    --dark:#180a3a; 
+    --darker:#10032e;
+    --accent:#6DE0F6;
     --light:#fff;
-    --gradient1:#34A0CD; 
-    --gradient2:#639FE1;
+    --gradient1:#803EE1;
+    --gradient2:#560B92;
 }
 
 * {
@@ -46,7 +47,6 @@ p {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 clamp(24px, 8vw, 80px);
-    background: url("/images/bg.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: auto auto;
@@ -68,8 +68,8 @@ p {
     text-decoration: none;
     font-size: clamp(14px,4vw,16px);
     padding: 20px 96px;
-    background: linear-gradient(to right bottom, var(--gradient2), var(--gradient2));
     border-radius: 28px;
+    background: linear-gradient(to right bottom, var(--gradient2), var(--gradient2));
 }
 .link-btn:hover, .link-btn:active {
     background: linear-gradient(to right bottom, var(--accent), var(--accent));
@@ -82,9 +82,11 @@ p {
 }
 .logo {
     flex-grow: 1;
+    align-items: flex-end;
+    display: flex;
 }
 .logo img {
-    width: clamp(124px, 5vw, 170px);
+    max-height: 75px;
 }
 .menu {
     display: flex;
@@ -147,8 +149,9 @@ p {
 .testimonial {
     display: flex;
     flex-direction: column;
-    background: var(--dark);
+    background: var(--darker);
     padding:40px 26px 26px 26px;
+    border-radius: 8px;
 }
 .testimonial p{
     font-size: clamp(14px, 4vw, 16px);
@@ -161,14 +164,15 @@ p {
 }
 .avatar img {
     width: 50px;
+    border-radius: 50%;
 }
 .footer {
-    margin-top: 200px;
+    margin-top: 120px;
     max-width: 1440px;
     width: 100vw;
     margin-left: 50%;
     transform: translateX(-50%);
-    background: var(--dark);
+    background: var(--darker);
     padding: 53px 120px;
 }
 .footer-info {
