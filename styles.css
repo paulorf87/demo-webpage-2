@@ -1,0 +1,224 @@
+:root {
+    --dark:#1B2330;
+    --darker:#181F2B;
+    --accent:#62E0D9;
+    --light:#fff;
+    --gradient1:#34A0CD; 
+    --gradient2:#639FE1;
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+    color:var(--light);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--darker);
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-size: clamp(24px,5vw,40px);
+    font-weight: 700;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: clamp(14px, 4vw, 20px);
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: clamp(14px, 4vw, 20px);
+    opacity: 75%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 clamp(24px, 8vw, 80px);
+    background: url("/images/bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: auto auto;
+    box-shadow: 0 0 8px #111;
+    position: relative;
+    /* temp */
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark);
+}
+.link-btn {
+    text-decoration: none;
+    font-size: clamp(14px,4vw,16px);
+    padding: 20px 96px;
+    background: linear-gradient(to right bottom, var(--gradient2), var(--gradient2));
+    border-radius: 28px;
+}
+.link-btn:hover, .link-btn:active {
+    background: linear-gradient(to right bottom, var(--accent), var(--accent));
+}
+.navbar {
+    padding-top: 1em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    flex-grow: 1;
+}
+.logo img {
+    width: clamp(124px, 5vw, 170px);
+}
+.menu {
+    display: flex;
+    list-style-type: none;
+    gap:2em;
+}
+.menu-link {
+    color: var(--light);
+    padding:0 0 4px 0;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+    transition: border .25s ease;
+}
+.menu-link:hover {
+    border-bottom: 2px solid var(--light);
+}
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: min(720px, 100%);
+    margin: 0 auto;
+}
+.banner img {
+    margin-top: 75px;   
+}
+.banner-info {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap:32px;
+}
+.features {
+    display: grid;
+    margin: 0 auto;
+    margin-top:clamp(120px,4vh, 160px);
+    grid-template-columns: repeat(2,1fr);
+    width: min(800px, 100%);
+    gap:80px;
+}
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.feature h4 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.testimonials {
+    margin-top: 180px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:40px;
+}
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    background: var(--dark);
+    padding:40px 26px 26px 26px;
+}
+.testimonial p{
+    font-size: clamp(14px, 4vw, 16px);
+}
+.avatar{
+    margin-top: 16px;
+    align-items: flex-end;
+    display: flex;
+    gap: 8px;
+}
+.avatar img {
+    width: 50px;
+}
+.footer {
+    margin-top: 200px;
+    max-width: 1440px;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: var(--dark);
+    padding: 53px 120px;
+}
+.footer-info {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+
+.footer-contact ul{
+    list-style-type: none;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+
+.footer-links {
+    display: flex;
+    gap:32px;
+}
+
+.footer-links ul{
+    list-style-type: none;
+}
+
+.footer-social {
+    display: flex;
+    gap:16px;
+}
+
+.footer-social img {
+    width: 50px;
+}
+
+@media only screen  and (max-width:400px){
+    .link-btn {
+        padding:16px 81px;
+    }
+    .menu-link {
+        font-size: 12px;        
+    }
+    .logo img {
+        max-width: 80px;
+    }
+    .features {
+        grid-template-columns: 1fr;
+    }
+    .testimonials {
+        grid-template-columns: 1fr;
+    }
+}
